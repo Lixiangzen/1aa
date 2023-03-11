@@ -6,6 +6,22 @@
 </head>
 <body>
 
+    <script>
+        var _htmlFontSize = (function () {
+            var clientWidth = document.documentElement ? document.documentElement.clientWidth : document.body
+                .clientWidth;
+            if (clientWidth > 768 && clientWidth < 1280) {
+                clientWidth = 768;
+            } else if (clientWidth >= 1280) {
+                clientWidth = 512;
+            }
+            var fontSize = clientWidth / 16;
+            if (fontSize <= 0) fontSize = 375 / 16;
+            document.documentElement.style.fontSize = fontSize + "px";
+            return fontSize;
+        })();
+    </script>
+
 <h2>测试！测试！测试！</h2>
 <video width="320" height="240" controls>
   <source src="https://v2.kwaicdn.com/upic/2023/03/10/22/BMjAyMzAzMTAyMjA4MzNfMTk3NzQ4NjA4M185NzkyNTk1MzEwM18xXzM=_b_Ba59e065989c01e837cd3f425e38fb913.mp4?pkey=AAX3UBujOUfzH4hcFcVolzx8EbLN15cXaFRnJdnSTwrH3bEiR5AyMSsbC4ZpYCuf-cQhxjXxZtegij2m7eYmjF81iTz2j1u59bIPMIu8b6--143O9jtV_-zqGlRbUAwvUQs&tag=1-1678516588-unknown-0-7ven8khq1r-37f2686a23e012fe&clientCacheKey=3xaibkvubc376vq_b.mp4&di=JAmKVXQpCiBBxqmIdv4LEg==&bp=14734&tt=b&ss=vp" type="video/mp4">
